@@ -5,8 +5,8 @@ import {
   Text,
   View
 } from 'react-native';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
-import HealthTracker from './Components/HealthTracker.js'
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -14,11 +14,10 @@ export default class App extends Component<Props> {
   render() {
     return (
 
-      <View style={styles.container}>
-
-        <HealthTracker/>
-
-      </View>
+     <Grid>
+                   <Col style={{backgroundColor:"red"}}></Col>
+                   <Col style={{backgroundColor:"blue"}}></Col>
+               </Grid>
 
     );
   }

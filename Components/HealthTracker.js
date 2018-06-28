@@ -22,21 +22,10 @@ export default class HealthTracker extends Component {
       render() {
 
         return (
-          <Container>
-              <Grid>
-                 <Col>
-                    <Button onPress={() => handleButtonClick(true, this)}/>
-                 </Col>
-
-                 <Col>
-                    {this.state.health}
-                 </Col>
-
-                 <Col>
-                     <Button onPress={() => handleButtonClick(false, this)}/>
-                 </Col>
-              </Grid>
-          </Container>
+          <Grid>
+               <Col style={{backgroundColor:"red"}}></Col>
+               <Col style={{backgroundColor:"blue"}}></Col>
+           </Grid>
         );
       }
 }
