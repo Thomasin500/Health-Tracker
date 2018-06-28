@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Button, Text, Icon } from 'native-base';
-//import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 
 const handleButtonClick = (increase = true, render_scope) => {
@@ -25,7 +25,7 @@ export default class HealthTracker extends Component {
           <Container>
               <Grid>
                  <Col>
-                    <Button onPress={() => handleButtonClick(true, this)}
+                    <Button onPress={() => handleButtonClick(true, this)}/>
                  </Col>
 
                  <Col>
@@ -33,7 +33,7 @@ export default class HealthTracker extends Component {
                  </Col>
 
                  <Col>
-                     <Button onPress={() => handleButtonClick(false, this)}
+                     <Button onPress={() => handleButtonClick(false, this)}/>
                  </Col>
               </Grid>
           </Container>
