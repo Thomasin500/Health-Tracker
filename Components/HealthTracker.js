@@ -26,15 +26,23 @@ export default class HealthTracker extends Component {
       render() {
 
         return (
-           <View>
-               <Button onPress={() => handleButtonClick(true, this)}>
-                    <Icon type="Entypo" name='plus' />
-               </Button>
+           <Grid>
+               <Col>
+                   <Button onPress={() => handleButtonClick(true, this)}>
+                        <Icon type="Entypo" name='plus' />
+                   </Button>
+               </Col>
 
-               <Button onPress={() => handleButtonClick(false, this)}>
-                   <Icon type="Entypo" name='minus' />
-               </Button>
-          </View>
+               <Col>
+                  <Text>{this.state.health}</Text>
+               </Col>
+
+               <Col>
+                   <Button onPress={() => handleButtonClick(false, this)}>
+                       <Icon type="Entypo" name='minus' />
+                   </Button>
+               </Col>
+           </Grid>
         );
       }
 }
