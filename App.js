@@ -16,7 +16,16 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-        <HealthTracker/>
+
+    <Grid>
+        <Row>
+            <HealthTracker/>
+        </Row>
+
+        <Row>
+            <HealthTracker/>
+        </Row>
+    </Grid>
     );
   }
 }
