@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  View
+} from 'react-native';
 import { Container, Button, Text, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-
 
 const handleButtonClick = (increase = true, render_scope) => {
 
     const increment = increase ? 1 : -1;
 
-    render_scope.setState({health: rendor_scope.state.health + increment});
+    render_scope.setState({health: render_scope.state.health + increment});
 }
 
 export default class HealthTracker extends Component {
@@ -22,10 +26,15 @@ export default class HealthTracker extends Component {
       render() {
 
         return (
-          <Grid>
-               <Col style={{backgroundColor:"red"}}></Col>
-               <Col style={{backgroundColor:"blue"}}></Col>
-           </Grid>
+           <View>
+               <Button onPress={() => handleButtonClick(true, this)}>
+                    <Icon type="Entypo" name='plus' />
+               </Button>
+
+               <Button onPress={() => handleButtonClick(false, this)}>
+                   <Icon type="Entypo" name='minus' />
+               </Button>
+          </View>
         );
       }
 }

@@ -1,24 +1,22 @@
+<script src="http://localhost:8097"></script>
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
+  Button,
   View
 } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
+import HealthTracker from './Components/HealthTracker.js'
 
 type Props = {};
 export default class App extends Component<Props> {
 
   render() {
     return (
-
-     <Grid>
-                   <Col style={{backgroundColor:"red"}}></Col>
-                   <Col style={{backgroundColor:"blue"}}></Col>
-               </Grid>
-
+        <HealthTracker/>
     );
   }
 }
