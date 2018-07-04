@@ -7,11 +7,6 @@ import {
 import { Container, Button, Text, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
-const rotate_180_style = {
-
-    transform: [{ rotate: '180deg' }],
-}
-
 const handleButtonClick = (increase = true, render_scope) => {
 
     const increment = increase ? 1 : -1;
