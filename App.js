@@ -18,12 +18,6 @@ const rotate_180_style = {
     right:        22
 }
 
-
-var dimensions =  require('Dimensions') ;
-var bgHeight = dimensions.get('window').height;
-var bgWidth = dimensions.get('window').width;
-var viewHeight = 100;
-
 type Props = {};
 export default class App extends Component<Props> {
 
