@@ -25,8 +25,10 @@ export default class HealthTracker extends Component {
 
       render() {
 
+        const { top, style } = this.props;
+
         return (
-           <Grid>
+           <Grid style={style}>
                <Col>
                    <Button onPress={() => handleButtonClick(true, this)}>
                         <Icon type="Entypo" name='plus' />

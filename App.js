@@ -13,11 +13,16 @@ import HealthTracker from './Components/HealthTracker.js'
 
 const rotate_180_style = {
 
-    transform:     [{ rotate: '180deg' }],
-    marginBottom:  400,
-    //paddingRight:  125,
-   // marginRight:   125,
+    transform:    [{ rotateZ: '180deg'}],
+    marginBottom: 400,
+    right:        22
 }
+
+
+var dimensions =  require('Dimensions') ;
+var bgHeight = dimensions.get('window').height;
+var bgWidth = dimensions.get('window').width;
+var viewHeight = 100;
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -25,25 +30,25 @@ export default class App extends Component<Props> {
   render() {
     return (
 
-    <Grid>
+      <Grid>
 
-      <Col size={2}>
-      </Col>
+        <Col size={2.5}>
+        </Col>
 
-      <Col size={6}>
-        <Row style = {rotate_180_style}>
-            <HealthTracker/>
-        </Row>
+        <Col size={6}>
+          <Row style={rotate_180_style}>
+              <HealthTracker/>
+          </Row>
 
-        <Row>
-            <HealthTracker/>
-        </Row>
-      </Col>
+          <Row>
+              <HealthTracker/>
+          </Row>
+        </Col>
 
-      <Col size={2}>
-      </Col>
-        
-    </Grid>
+        <Col size={2}>
+        </Col>
+          
+      </Grid>
     );
   }
 }
