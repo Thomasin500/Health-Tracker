@@ -21,7 +21,7 @@ export default class HealthTracker extends Component {
                     </Button>
                </Col>
 
-               <Col>
+               <Col style={styles.textStyle}>
                   <Text>{health}</Text>
                </Col>
 
@@ -34,3 +34,12 @@ export default class HealthTracker extends Component {
         );
       }
 }
+
+const styles = StyleSheet.create({
+    textStyle: {
+      left: 25,
+      top: 10
+    },
+    
+  });
+  
