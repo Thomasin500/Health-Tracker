@@ -4,10 +4,8 @@ import {
   StyleSheet,
   View
 } from 'react-native';
-import { Container, Button, Text, Icon } from 'native-base';
+import { Button, Text, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-
-
 
 export default class HealthTracker extends Component {
 
