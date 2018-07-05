@@ -7,42 +7,30 @@ import {
 import { Container, Button, Text, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
-const handleButtonClick = (increase = true, render_scope) => {
 
-    const increment = increase ? 1 : -1;
-
-    render_scope.setState({health: render_scope.state.health + increment});
-}
 
 export default class HealthTracker extends Component {
 
-     constructor(props) {
-        super(props);
-        this.state = {
-            health: 12513
-        };
-     }
-
       render() {
 
-        const { top, style } = this.props;
+        const { health, style, OnAddClick, onMinusClick } = this.props;
 
         return (
            <Grid style={style}>
                <Col>
-                   <Button onPress={() => handleButtonClick(true, this)}>
-                        <Icon type="Entypo" name='plus' />
-                   </Button>
-               </Col>
-
-               <Col>
-                  <Text>{this.state.health}</Text>
-               </Col>
-
-               <Col>
-                   <Button onPress={() => handleButtonClick(false, this)}>
+                    <Button onPress={() => onMinusClick()}>
                        <Icon type="Entypo" name='minus' />
-                   </Button>
+                    </Button>
+               </Col>
+
+               <Col>
+                  <Text>{health}</Text>
+               </Col>
+
+               <Col>
+                    <Button onPress={() => OnAddClick()}>
+                        <Icon type="Entypo" name='plus' />
+                    </Button>
                </Col>
            </Grid>
         );

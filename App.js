@@ -18,8 +18,31 @@ const rotate_180_style = {
     right:        22
 }
 
+const handleButtonClick = (render_scope, player_one = true, increase = true) => {
+
+  console.log('click');
+
+  const increment = increase ? 1 : -1;
+
+  if (player_one) {
+    render_scope.setState({player_one_health: render_scope.state.player_one_health + increment});
+  } else {
+    render_scope.setState({player_two_health: render_scope.state.player_two_health + increment});
+  }
+
+}
+
 type Props = {};
 export default class App extends Component<Props> {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+        player_one_health: 1,
+        player_two_health: 2
+    };
+  }
+
 
   render() {
     return (
@@ -31,11 +54,19 @@ export default class App extends Component<Props> {
 
         <Col size={6}>
           <Row style={rotate_180_style}>
-              <HealthTracker/>
+              <HealthTracker 
+                health={this.state.player_one_health} 
+                OnAddClick={() => handleButtonClick(this, true, true)}
+                onMinusClick={() => handleButtonClick(this, true, false)}
+              />
           </Row>
 
           <Row>
-              <HealthTracker/>
+              <HealthTracker  
+              health={this.state.player_two_health} 
+              OnAddClick={() => handleButtonClick(this, false, true)}
+              onMinusClick={() => handleButtonClick(this, false, false)}
+          />
           </Row>
         </Col>
 
