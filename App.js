@@ -50,11 +50,31 @@ export default class App extends Component<Props> {
           </Row>
 
           <Row size={20}>
-            <Button onPress={() => setHealth(this, 50)}>
-              <Text style={styles.middle_row_style}> 50</Text>
-            </Button>
-            <Button
-            />
+
+            <Col style={{backgroundColor: 'green'}}>
+
+              <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 30)}>
+                <Text> 30</Text>
+              </Button>
+
+            </Col>
+
+            <Col style={{backgroundColor: 'black'}}>
+              <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 40)}>
+                <Text> 40</Text>
+              </Button>
+            </Col>
+
+            <Col style={{backgroundColor: 'green'}}>
+              <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 50)}>
+                <Text> 50</Text>
+              </Button>
+            </Col>
+
+
+            {/*  */}
+
+
           </Row>
 
           <Row size={40} style={styles.bottomRowStyle}>
@@ -96,4 +116,9 @@ const styles = StyleSheet.create({
     left: 40,
     top: 100
   },
+  centerButtomStyle: {
+    left: 45,
+    top: 40
+  
+  }
 });
