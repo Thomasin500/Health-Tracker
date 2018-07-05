@@ -49,32 +49,26 @@ export default class App extends Component<Props> {
               />
           </Row>
 
-          <Row size={20}>
 
-            <Col style={{backgroundColor: 'green'}}>
-
+{/* //TODO maybe set these buttons to native-base action sheet component */}      
+          <Row style={styles.centerRowStyle} size={20}>
+            <Col>
               <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 30)}>
                 <Text> 30</Text>
               </Button>
-
             </Col>
 
-            <Col style={{backgroundColor: 'black'}}>
+            <Col>
               <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 40)}>
                 <Text> 40</Text>
               </Button>
             </Col>
 
-            <Col style={{backgroundColor: 'green'}}>
+            <Col>
               <Button style={styles.centerButtomStyle} onPress={() => setHealth(this, 50)}>
                 <Text> 50</Text>
               </Button>
             </Col>
-
-
-            {/*  */}
-
-
           </Row>
 
           <Row size={40} style={styles.bottomRowStyle}>
@@ -97,7 +91,7 @@ const styles = StyleSheet.create({
   bottomRowStyle: {
     backgroundColor: 'blue'
   },
-  middle_row_style: {
+  middleRowStyle: {
     textAlign: 'center',
     height: 30,
     lineHeight: 30,
@@ -119,6 +113,8 @@ const styles = StyleSheet.create({
   centerButtomStyle: {
     left: 45,
     top: 40
-  
+  },
+  centerRowStyle: {
+    backgroundColor: 'grey'
   }
 });
